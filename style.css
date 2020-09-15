@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 10% 15% 20% 20% 35%;
+    grid-template-areas:
+        "nav nav"
+        "carroussel need"
+        "carroussel form"
+        "fellows form"
+        "fellows footer";
+
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.nav {
+    grid-area: nav;
+
+    background-color: aquamarine;
+
+    display: flex;
+    align-items: center;
+}
+
+.carroussel {
+    grid-area: carroussel;
+
+    background-color: coral;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.need {
+    grid-area: need;
+
+    background-color: olive;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.need > p {
+    margin-left: 60px;
+}
+
+.joinButton {
+    margin: 15px 70px;
+    padding: 10px;
+}
+
+.form {
+    grid-area: form;
+
+    background-color: thistle;
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px ;
+}
+
+.form > h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#message {
+    height: 100px;
+}
+
+
+.fellows {
+    grid-area: fellows;
+
+    background-color: fuchsia;
+}
+
+.fellows > h2 {
+    margin: 30px auto 30px 30px;
+}
+
+.figures {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.picures {
+    width: 220px;
+    height: 220px;
+    background-color: blue;
+}
+
+.footer {
+    grid-area: footer;
+
+    background-color: indigo;
+}
+
+.footerTopping {
+    margin: 10px;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+
+/*média queries*/
+
+@media screen and (max-width: 640px) {
+    .body {
+        grid-template: 10vh 25vh 40vh auto auto 25vh / 100%;
+        grid-template-areas:
+                "nav"
+                "need"
+                "carroussel"
+                "fellows"
+                "form"
+                "footer";
+    }
+
+    /*petits ajustements*/
+
+    .carroussel {
+        padding: 10px;
+    }
+
+    .carroussel > h2 {
+        margin: 10px 30px;
+    }
+
+    .figures {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .picures {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+
